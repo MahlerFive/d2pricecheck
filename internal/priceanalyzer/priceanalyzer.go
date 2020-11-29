@@ -138,6 +138,16 @@ func (p *PriceAnalyzer) parseLine(line string) (*Item, string, bool) {
 		return nil, "", false
 	}
 
+	// remove "obo" ending
+	if strings.EqualFold(words[len(words)-1], "obo") {
+		words = words[:len(words)-1]
+	}
+
+	// need at least an item and a price
+	if len(words) < 2 {
+		return nil, "", false
+	}
+
 	// extract price which must match a rune name
 	price := words[len(words)-1]
 	if _, ok := runesByName[price]; !ok {
