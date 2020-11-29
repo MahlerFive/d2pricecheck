@@ -122,25 +122,29 @@ func (p *PriceAnalyzer) parseLine(line string) (*Item, string, bool) {
 	// split by spaces
 	words := strings.Split(line, " ")
 
-	// need at least an item and a price
-	if len(words) < 2 {
-		return nil, "", false
-	}
+	// remove common words/phrases that should be ignored
+	i := 0
+	for _, word := range words {
+		// remove any offer/need words
+		if strings.EqualFold(word, "o") || strings.EqualFold(word, "offer") ||
+			strings.EqualFold(word, "n") || strings.EqualFold(word, "need") {
+			continue
+		}
 
-	// remove any offer/need prefix
-	if strings.EqualFold(words[0], "o") || strings.EqualFold(words[0], "offer") ||
-		strings.EqualFold(words[0], "n") || strings.EqualFold(words[0], "need") {
-		words = words[1:]
-	}
+		// remove "obo"
+		if strings.EqualFold(word, "obo") {
+			continue
+		}
 
-	// need at least an item and a price
-	if len(words) < 2 {
-		return nil, "", false
-	}
+		// remove "rune" ending (eg. when price is "ist rune", ignore the "rune" part)
+		// NOTE: removing all instances of "rune" should be safe, at least for now, since no unique/sets have "rune" in the name as a standalone word
+		if strings.EqualFold(word, "rune") {
+			continue
+		}
 
-	// remove "obo" ending
-	if strings.EqualFold(words[len(words)-1], "obo") {
-		words = words[:len(words)-1]
+		// if we reached here, we don't want to remove this word so put it back in the array
+		words[i] = word
+		i++
 	}
 
 	// need at least an item and a price
