@@ -60,15 +60,21 @@ There are a lot of limitations on the text parsing right now.
 <h4>Examples that work</h4>
 
 Tal Rasha's Lidless Eye, IST
+
 Tal Rasha's Lidless Eye=IST
+
 Lidless Wall [+1] =pul
 
 <h4>Examples that won't work</h4>
 
 Tal weapon, IST
+
 Tal Rasha's Lidless Eye, IST/GUL
+
 Eth Lidless Wall [+1] =pul
+
 [O] Lidless Wall [+1] =pul
+
 Lidless Wall +2 Skills, IST
 
 Future
