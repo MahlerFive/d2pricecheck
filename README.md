@@ -65,17 +65,17 @@ Tal Rasha's Lidless Eye=IST
 
 Lidless Wall [+1] =pul
 
+[O] Lidless Wall [+1] =pul
+
+Lidless Wall +2 Skills, IST
+
 <h4>Examples that won't work</h4>
 
 Tal weapon, IST
 
-Tal Rasha's Lidless Eye, IST/GUL
+Tal Rasha's Lidless Eye, IST/GUL (this will actually parse, but it will price it at GUL and ignore IST)
 
-Eth Lidless Wall [+1] =pul
-
-[O] Lidless Wall [+1] =pul
-
-Lidless Wall +2 Skills, IST
+Eth Lidless Wall [+1] =pul ("Eth" isn't handle when it's before the item name)
 
 Future
 ------

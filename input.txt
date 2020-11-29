@@ -17,3 +17,11 @@ Tal Rasha's Lidless Eye, gul
 Tal Rasha's Lidless Eye 1/2/3, gul
 Steel Shade (2/8/120/40/5) -> IST
 Lidless Wall [+1] =pul
+Tal Rasha's Lidless Eye, IST
+Tal Rasha's Lidless Eye=IST
+Lidless Wall [+1] =pul
+[O] Lidless Wall [+1] =pul
+Lidless Wall +2 Skills, IST
+Tal weapon, IST
+Tal Rasha's Lidless Eye, IST/GUL
+Eth Lidless Wall [+1] =pul
