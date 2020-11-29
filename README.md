@@ -94,7 +94,7 @@ Please post a Github issue with the following info:
 
 - Description of what text doesn't get parsed properly
 - At least one example
-- Tag with `Bug`
+- Tag with `bug`
 
 **Want to make your own trade prices searchable?**
 
@@ -107,7 +107,7 @@ See the examples in the limitations section.
 
 **Feature Requests**
 
-Please post a Github issue and tag it with `Feature`.
+Please post a Github issue and tag it with `enhancement`.
 
 **Code Contributions**
 
