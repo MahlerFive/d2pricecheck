@@ -45,22 +45,12 @@ func (p *PriceAnalyzer) Analyze() error {
 		line := p.tradesScanner.Text()
 		fmt.Printf("Processing line: \"%s\"\n", line)
 
-		itemName, price, valid := p.parseLine(line)
-
+		item, price, valid := p.parseLine(line)
 		if !valid {
 			continue
 		}
 
-		fmt.Printf("\tParsed out item = \"%s\", Price = \"%s\"\n", itemName, price)
-
-		item, ok := p.items[itemName]
-		if !ok {
-			continue
-		}
-
-		fmt.Printf("\tMatched item = \"%s\"\n", item)
-
-		if _, ok = item.PriceDistribution[runesByName[price]]; !ok {
+		if _, ok := item.PriceDistribution[runesByName[price]]; !ok {
 			item.PriceDistribution[runesByName[price]] = 1
 		} else {
 			item.PriceDistribution[runesByName[price]] += 1
@@ -115,7 +105,7 @@ func (p *PriceAnalyzer) loadSets() error {
 
 // parseLine parses a single line and returns the item and price (the rune name as string).
 // If the line doesn't have a valid item and price, it false for the valid flag.
-func (p *PriceAnalyzer) parseLine(line string) (string, string, bool) {
+func (p *PriceAnalyzer) parseLine(line string) (*Item, string, bool) {
 	line = strings.ToLower(line)
 
 	// convert all non-alpha to spaces
@@ -134,7 +124,7 @@ func (p *PriceAnalyzer) parseLine(line string) (string, string, bool) {
 
 	// need at least an item and a price
 	if len(words) < 2 {
-		return "", "", false
+		return nil, "", false
 	}
 
 	// remove any offer/need prefix
@@ -145,17 +135,33 @@ func (p *PriceAnalyzer) parseLine(line string) (string, string, bool) {
 
 	// need at least an item and a price
 	if len(words) < 2 {
-		return "", "", false
+		return nil, "", false
 	}
 
-	// extract item and price
-	item := strings.Join(words[:len(words)-1], "")
+	// extract price which must match a rune name
 	price := words[len(words)-1]
-
-	// need price to match a rune
 	if _, ok := runesByName[price]; !ok {
-		return "", "", false
+		return nil, "", false
 	}
+
+	// search for an item name match
+	// chop off parts from the end of the name until a match is found, or we run out of name parts
+	itemNameFound := false
+	var item *Item
+	for numItemNameParts := len(words) - 1; numItemNameParts > 0; numItemNameParts-- {
+		itemName := strings.Join(words[:numItemNameParts], "")
+		var ok bool
+		if item, ok = p.items[itemName]; ok {
+			itemNameFound = true
+			break
+		}
+	}
+
+	if !itemNameFound {
+		return nil, "", false
+	}
+
+	fmt.Printf("\tMatched item = \"%s\" with price = %s\n", item, price)
 
 	return item, price, true
 }
