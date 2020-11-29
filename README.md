@@ -55,7 +55,7 @@ There are a lot of limitations on the text parsing right now.
 - Name must exactly match the full name
 - Item must be first, and the price must be at the end
 - Only rune prices considered
-- Doesn't work when there are other letters other than the item name and the rune name (eg. specifying modifiers like `eth`/`ethereal` or `180ED`, starting the line with `[o]` to indicate an offer)
+- Will not work in some cases when there are other letters other than the item name and the rune name. Letters between the item name and rune are ignored, and some common words/phrases are ignored like `[O]`, `[N]`, `rune`, and `obo`.
 
 <h4>Examples that work</h4>
 
