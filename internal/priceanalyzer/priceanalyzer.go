@@ -71,32 +71,8 @@ func (p *PriceAnalyzer) Analyze() error {
 		return errors.Wrap(err, "error during trades scanning")
 	}
 
-	// Print out all items and price distributions
-	fmt.Printf("\n\nITEM PRICES\n===========\n\n")
-	for _, item := range p.items {
-		if len(item.PriceDistribution) < 1 {
-			continue
-		}
-
-		fmt.Printf("%s", item)
-		for runeNo, count := range item.PriceDistribution {
-			fmt.Printf("\t%s:%d", runesByNumber[runeNo], count)
-		}
-		fmt.Println()
-	}
-
-	// Write all items and price distribution to output
-	for _, item := range p.items {
-		if len(item.PriceDistribution) < 1 {
-			continue
-		}
-
-		p.output.WriteString(item.String())
-		for runeNo, count := range item.PriceDistribution {
-			p.output.WriteString(fmt.Sprintf("\t%s:%d", runesByNumber[runeNo], count))
-		}
-		p.output.WriteString("\n")
-	}
+	// Write results
+	p.writeOutput()
 
 	return nil
 }
@@ -161,6 +137,17 @@ func (p *PriceAnalyzer) parseLine(line string) (string, string, bool) {
 		return "", "", false
 	}
 
+	// remove any offer/need prefix
+	if strings.EqualFold(words[0], "o") || strings.EqualFold(words[0], "offer") ||
+		strings.EqualFold(words[0], "n") || strings.EqualFold(words[0], "need") {
+		words = words[1:]
+	}
+
+	// need at least an item and a price
+	if len(words) < 2 {
+		return "", "", false
+	}
+
 	// extract item and price
 	item := strings.Join(words[:len(words)-1], "")
 	price := words[len(words)-1]
@@ -171,4 +158,33 @@ func (p *PriceAnalyzer) parseLine(line string) (string, string, bool) {
 	}
 
 	return item, price, true
+}
+
+func (p *PriceAnalyzer) writeOutput() {
+	// Print out all items and price distributions
+	fmt.Printf("\n\nITEM PRICES\n===========\n\n")
+	for _, item := range p.items {
+		if len(item.PriceDistribution) < 1 {
+			continue
+		}
+
+		fmt.Printf("%s", item)
+		for runeNo, count := range item.PriceDistribution {
+			fmt.Printf("\t%s:%d", runesByNumber[runeNo], count)
+		}
+		fmt.Println()
+	}
+
+	// Write all items and price distribution to output
+	for _, item := range p.items {
+		if len(item.PriceDistribution) < 1 {
+			continue
+		}
+
+		p.output.WriteString(item.String())
+		for runeNo, count := range item.PriceDistribution {
+			p.output.WriteString(fmt.Sprintf("\t%s:%d", runesByNumber[runeNo], count))
+		}
+		p.output.WriteString("\n")
+	}
 }
