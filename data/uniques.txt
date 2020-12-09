@@ -1,7 +1,7 @@
 Alma Negra
 Andariel's Visage
-Annihilus
-Arachnid Mesh
+Annihilus, anni
+Arachnid Mesh, ara, arachnid
 Arioc's Needle
 Arkaine's Valor
 Arm of King Leoric
@@ -25,7 +25,7 @@ Blackhorn's Face
 Blackleach Blade
 Blackoak Shield
 Blacktongue
-Blade Of Ali Baba
+Blade Of Ali Baba, ali baba
 Bladebone
 Bladebuckle
 Blastbark
@@ -52,7 +52,7 @@ Bverrit Keep
 Carin Shard
 Carrion Wind
 Cerebus' Bite
-Chance Guards
+Chance Guards, chancies
 Chromatic Ire
 Cliffkiller
 Cloudcrack
@@ -85,16 +85,16 @@ Dimoak's Hew
 Djinn Slayer
 Doombringer
 Doomslinger
-Dracul's Grasp
+Dracul's Grasp, dracs
 Dragonscale
-Duriel's Shell
+Duriel's Shell, duriels
 Duskdeep
 Dwarf Star
 Eaglehorn
 Earth Shifter
 Earthshaker
 Endlesshail
-Eschuta's Temper
+Eschuta's Temper, eschuta, eschutas
 Ethereal Edge
 Executioner's Justice
 Felloak
@@ -106,7 +106,7 @@ Frostburn
 Frostwind
 Gargoyle's Bite
 Gerke's Sanctuary
-Gheed's Fortune
+Gheed's Fortune, gheed, gheeds
 Ghostflame
 Ghoulhide
 Giant Skull
@@ -124,7 +124,7 @@ Goreshovel
 Gravenspine
 Gravepalm
 Greyform
-Griffon's Eye
+Griffon's Eye, griffons, griffon
 Grim's Burning Dead
 Griswold's Edge
 Guardian Angel
@@ -133,7 +133,7 @@ Gull
 Gut Siphon
 Halaberd's Reign
 Hand of Blessed Light
-Harlequin Crest
+Harlequin Crest, harlequin, shako
 Hawkmail
 Head Hunter's Glory
 Headstriker
@@ -167,7 +167,7 @@ Jade Talon
 Jalal's Mane
 Kelpie Snare
 Kinemil's Awl
-Kira's Guardian
+Kira's Guardian, kiras
 Knell Striker
 Kuko Shakaku
 Lacerator
@@ -178,7 +178,7 @@ Lava Gout
 Leadcrow
 Lenymo
 Leviathan
-Lidless Wall
+Lidless Wall, lidless
 Lightsabre
 Lycander's Aim
 Lycander's Flank
@@ -186,15 +186,15 @@ Maelstrom
 Magefist
 Magewrath
 Manald Heal
-Mang Song's Lesson
-Mara's Kaleidoscope
+Mang Song's Lesson, mong song, mang songs
+Mara's Kaleidoscope, maras
 Marrowwalk
-Medusa's Gaze
+Medusa's Gaze, medusas
 Messerschmidt's Reaver
 Metalgrid
 Moonfall
-Moser's Blessed Circle
-Nagelring
+Moser's Blessed Circle, mosers, moser
+Nagelring, nagel
 Nature's Peace
 Nightsmoke
 Nightwing's Veil
@@ -202,7 +202,7 @@ Nokozan Relic
 Nord's Tenderizer
 Nosferatu's Coil
 Ondal's Wisdom
-Ormus' Robes
+Ormus' Robes, ormus
 Peasant Crown
 Pelta Lunata
 Pierre Tombale Couant
@@ -210,13 +210,13 @@ Plague Bearer
 Pluckeye
 Pompeii's Wrath
 Pus Spitter
-Que-Hegan's Wisdom
+Que-Hegan's Wisdom, quehegans
 Radament's Sphere
 Rainbow Facet
 Rakescar
 Rattlecage
 Raven Claw
-Raven Frost
+Raven Frost, ravenfrost
 Ravenlore
 Razor's Edge
 Razorswitch
@@ -231,23 +231,23 @@ Rockstopper
 Rogue's Bow
 Rune Master
 Rusthandle
-Sandstorm Trek
+Sandstorm Trek, sandstorm
 Saracen's Chance
-Schaefer's Hammer
-Seraph's Hymn
+Schaefer's Hammer, schaefers, schaefer
+Seraph's Hymn, seraph hymn, seraphs, seraph
 Serpent Lord
 Shadow Dancer
 Shadow Killer
 Shadowfang
 Shaftstop
-Silks of the Victor
+Silks of the Victor, silks
 Silkweave
 Skewer of Krintiz
 Skin of the Flayed One
-Skin of the Vipermagi
+Skin of the Vipermagi, vipermagi, viper
 Skull Collector
 Skull Splitter
-Skullder's Ire
+Skullder's Ire, skullders, skullder
 Skystrike
 Snakecord
 Snowclash
@@ -274,14 +274,14 @@ Steeldriver
 Steelgoad
 Steelrend
 Stone Crusher
-Stone of Jordan
+Stone of Jordan, soj
 Stoneraven
 Stormchaser
 Stormeye
 Stormguild
 Stormlash
 Stormrider
-Stormshield
+Stormshield, storm shield
 Stormspike
 Stormspire
 Stormstrike
@@ -291,79 +291,79 @@ Suicide Branch
 Sureshrill Frost
 Swordback Hold
 Swordguard
-Tarnhelm
+Tarnhelm, tarn
 Tearhaunch
-Templar's Might
+Templar's Might, templar might, templar
 The Atlantean
 The Battlebranch
-The Cat's Eye
-The Centurion
-The Chieftain
-The Cranium Basher
-The Diggler
-The Dragon Chang
-The Eye of Etlich
-The Face of Horror
-The Fetid Sprinkler
-The Gavel Of Pain
-The General's Tan Do Li Ga
-The Gladiator's Bane
-The Gnasher
-The Grandfather
-The Grim Reaper
-The Hand of Broc
-The Impaler
-The Iron Jang Bong
-The Jade Tan Do
-The Mahim-Oak Curio
-The Meat Scraper
-The Minotaur
-The Oculus
-The Patriarch
-The Reaper's Toll
-The Redeemer
-The Rising Sun
-The Salamander
-The Scalper
-The Spirit Shroud
-The Tannr Gorerod
-The Vile Husk
+The Cat's Eye, cats eye, cat eye
+The Centurion, centurion
+The Chieftain, chieftain
+The Cranium Basher, cranium basher
+The Diggler, diggler
+The Dragon Chang, dragon change
+The Eye of Etlich, eye of etlich
+The Face of Horror, face of horror
+The Fetid Sprinkler, fetid sprinkler
+The Gavel Of Pain, gavel of pain
+The General's Tan Do Li Ga, generals tan do li ga, tan do li ga
+The Gladiator's Bane, gladiators bane, gladiator bane, gladiators
+The Gnasher, gnasher
+The Grandfather, grandfather
+The Grim Reaper, grim reaper
+The Hand of Broc, hand of broc
+The Impaler, impaler
+The Iron Jang Bong, iron jang bong
+The Jade Tan Do, jade tan do
+The Mahim-Oak Curio, mahim-oak curio, mahim oak, mahim
+The Meat Scraper, meat scraper
+The Minotaur, minotaur
+The Oculus, oculus, occulus, occy
+The Patriarch, patriarch
+The Reaper's Toll, reapers toll, reapers
+The Redeemer, redeemer
+The Rising Sun, rising sun
+The Salamander, salamander
+The Scalper, scalper
+The Spirit Shroud, spirit shroud
+The Tannr Gorerod, tannr gorerod, gorerod
+The Vile Husk, vile husk
 The Ward
-Thundergod's Vigor
-Thunderstroke
-Tiamat's Rebuke
-Titan's Revenge
+Thundergod's Vigor, tgods, tgod, thundergods
+Thunderstroke, tstroke, tstrokes
+Tiamat's Rebuke, tiamats, tiamat
+Titan's Revenge, titans, titan
 Todesfaelle Flamme
 Tomb Reaver
 Toothrow
 Torch of Iro
 Treads of Cthon
 Twitchthroe
-Tyrael's Might
+Tyrael's Might, tyraels
 Umbral Disk
 Ume's Lament
 Undead Crown
-Valkyrie Wing
-Vampire Gaze
+Valkyrie Wing, valk
+Vampire Gaze, vamp gaze, 
 Veil of Steel
 Venom Grip
 Venom Ward
 Verdungo's Hearty Cord
 Viperfork
 Visceratuant
-Wall of the Eyeless
-War Traveler
+Wall of the Eyeless, eyeless
+War Traveler, war travs, war trav, war travelers
 Warlord's Trust
 Warpspear
 Warshrike
-Waterwalk
+Waterwalk, waterwalks
 Widowmaker
-Windforce
+Windforce, wforce
 Windhammer
-Wisp Projector
+Wisp Projector, wisp proj, wisp
 Witchwild String
 Witherstring
-Wizardspike
+Wizardspike, wizspike, wiz spike
 Wizendraw
 Woestave
 Wolfhowl

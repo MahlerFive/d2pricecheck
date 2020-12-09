@@ -4,6 +4,8 @@ type Item struct {
 	FriendlyName string
 	// PriceDistribution is a map from the rune # to amount
 	PriceDistribution map[int]int
+	// Output marks whether this Item was already output or not
+	Output bool
 }
 
 func NewItem(itemFriendlyName string) *Item {

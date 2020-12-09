@@ -68,18 +68,30 @@ func (p *PriceAnalyzer) Analyze() error {
 }
 
 func (p *PriceAnalyzer) loadUniques() error {
+	// each line represents a single item with potentially many aliases, comma-separated
+
 	for p.uniquesScanner.Scan() {
-		itemName := p.uniquesScanner.Text()
-
-		// create the searchable version of the item name to use as the map key
-		itemNameSearchable := strings.ToLower(itemName)
-		reg, err := regexp.Compile("[^a-z]+")
-		if err != nil {
-			log.Fatal(err)
+		line := p.uniquesScanner.Text()
+		itemNames := strings.Split(line, ",")
+		if len(itemNames) < 1 {
+			return nil
 		}
-		itemNameSearchable = reg.ReplaceAllString(itemNameSearchable, "")
 
-		p.items[itemNameSearchable] = NewItem(itemName)
+		// create an item corresponding to this line - all aliases will reference it
+		item := NewItem(itemNames[0])
+
+		for _, itemName := range itemNames {
+			// create the searchable version of the item name to use as the map key
+			itemNameSearchable := strings.ToLower(itemName)
+			reg, err := regexp.Compile("[^a-z]+")
+			if err != nil {
+				log.Fatal(err)
+			}
+			itemNameSearchable = reg.ReplaceAllString(itemNameSearchable, "")
+
+			// map the item name or alias to the item
+			p.items[itemNameSearchable] = item
+		}
 	}
 
 	return errors.Wrap(p.tradesScanner.Err(), "error scanning uniques")
@@ -197,6 +209,9 @@ func (p *PriceAnalyzer) writeOutput() {
 
 	// Write all items and price distribution to output
 	for _, item := range p.items {
+		if item.Output {
+			continue
+		}
 		if len(item.PriceDistribution) < 1 {
 			continue
 		}
@@ -206,5 +221,7 @@ func (p *PriceAnalyzer) writeOutput() {
 			p.output.WriteString(fmt.Sprintf("\t%s:%d", runesByNumber[runeNo], count))
 		}
 		p.output.WriteString("\n")
+
+		item.Output = true
 	}
 }
